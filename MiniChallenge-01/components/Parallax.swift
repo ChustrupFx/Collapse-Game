@@ -35,7 +35,6 @@ class ParallaxItem {
     // Roda em todo o update da cena
     func update(scene: BaseLevelScene) {
         
-        
         if (self.type != .Fixed) {
             fillHorizontal(scene: scene)
         } else {
@@ -57,6 +56,7 @@ class ParallaxItem {
     
     // Preenche os sprites horizontalmente pela tela
     func fillHorizontal(scene: BaseLevelScene) {
+                
         let camera = scene.camera!
         
         while (!isRightSideFilled(camera: camera)) {

@@ -15,7 +15,7 @@ extension BaseLevelScene{
             if (node.name == "FallenCreating"){
                 
                 let creating = SKAction.run {
-                    if let someTileMap:SKTileMapNode = node as? SKTileMapNode{
+                    if let someTileMap: SKTileMapNode = node as? SKTileMapNode {
                         self.giveTileMapPhysicsBodyFallenBlocks(map: someTileMap, textureWidth: 50, tileMapProportion: 64)
                     }
                 }
@@ -59,7 +59,7 @@ extension BaseLevelScene{
                     let tileNode = SKSpriteNode(texture: tileTexture)
                     tileNode.scale(to: CGSize(width: tileTexture.size().width/proportion, height: tileTexture.size().height/proportion))
                     tileNode.position = CGPoint(x: x, y: y)
-                    tileNode.zPosition = -0.8
+                    tileNode.zPosition = 0
                     
                     tileNode.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: (tileTexture.size().width/proportion) - 5 , height: (tileTexture.size().height/proportion) - 10))
                     tileNode.physicsBody?.mass = 1000
@@ -74,7 +74,19 @@ extension BaseLevelScene{
                     
                     tileNode.position = CGPoint(x: (tileNode.position.x + startingLocation.x) , y: tileNode.position.y + startingLocation.y)
                     
-                    tileNode.run(.repeatForever(.repeatForever(.animate(with: .init(format: "water1 %@", frameCount: 1...3), timePerFrame: 0.25))))
+                    tileNode.run(
+                        .repeatForever(
+                            .repeatForever(
+                                .animate(
+                                    with: .init(
+                                        format: "fallWater %@",
+                                        frameCount: 1...3
+                                    ),
+                                    timePerFrame: 0.25
+                                )
+                            )
+                        )
+                    )
                     
                     let action = SKAction.wait(forDuration: 4.8)
                     self.addChild(tileNode)

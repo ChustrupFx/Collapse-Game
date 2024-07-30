@@ -314,7 +314,6 @@ extension BaseLevelScene{
                     self.addChild(tileNode)
                     tileNode.position = CGPoint(x: tileNode.position.x + startingLocation.x , y: tileNode.position.y + startingLocation.y)
                     
-                    
                 }
             }
         }

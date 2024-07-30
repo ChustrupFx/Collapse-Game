@@ -14,17 +14,17 @@ class Phase3: BaseLevelScene{
         super.didMove(to: view)
         
         // Adicionando o parallax na cena
-        parallax = Parallax(scene: self, items: [
-            .init(fileName: "New Planet", velocityFactor: 0, zIndex: -5, offset: CGVector(dx: 0, dy: 450)),
-            .init(fileName: "New Planet", velocityFactor: 0, zIndex: -5, offset: CGVector(dx: 0, dy: 650)),
-        ])
+//        parallax = Parallax(scene: self, items: [
+//            .init(fileName: "New Planet", velocityFactor: 0, zIndex: -5, offset: CGVector(dx: 0, dy: 450)),
+//            .init(fileName: "New Planet", velocityFactor: 0, zIndex: -5, offset: CGVector(dx: 0, dy: 650)),
+//        ])
         //
     }
     
     override func update(_ currentTime: TimeInterval) {
         super.update(currentTime)
         // Atualizando o parallax
-        parallax.update()
+//        parallax.update()
         //
     }
 }

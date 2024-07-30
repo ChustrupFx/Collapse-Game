@@ -58,11 +58,11 @@ class Prologue: BaseLevelScene{
         virtualController.jumpButton?.alpha = 0
         
         // Adicionar o parallax
-        parallax = Parallax(scene: self, items: [
-            .init(fileName: "Nuvens", velocityFactor: 0.06, zIndex: -1, offset: CGVector(dx: 0, dy: 150)),
-            .init(fileName: "Nuvens2", velocityFactor: 0.08, zIndex: -2, offset: CGVector(dx: 0, dy: 60)),
-            .init(fileName: "Noite Estrelada", velocityFactor: 0.005, zIndex: -4, type: .Background)
-        ])
+//        parallax = Parallax(scene: self, items: [
+//            .init(fileName: "Nuvens", velocityFactor: 0.06, zIndex: -1, offset: CGVector(dx: 0, dy: 150)),
+//            .init(fileName: "Nuvens2", velocityFactor: 0.08, zIndex: -2, offset: CGVector(dx: 0, dy: 60)),
+//            .init(fileName: "Noite Estrelada", velocityFactor: 0.005, zIndex: -4, type: .Background)
+//        ])
         //
         
         audioPlayer.setVolume(volume: 1, interval: 3).setLoops(loops: -1).play()
@@ -132,7 +132,7 @@ class Prologue: BaseLevelScene{
         }
         
         // Atualizar o parallax
-        parallax.update()
+//        parallax.update()
         //
     }
     

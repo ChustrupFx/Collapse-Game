@@ -30,7 +30,7 @@ class ExplainScene1: SKScene{
         }]))
         
         player.setVolume(volume: 1).setLoops(loops: -1).play()
-            
+        
         setUserDefaults(self.name!)
     }
     
@@ -50,22 +50,22 @@ class ExplainScene1: SKScene{
     
     func blinkModeSprite(shapeNode: SKSpriteNode){
         let fadeInAction = SKAction.fadeAlpha(to: 0.1, duration: 0.5)
-                let fadeOutAction = SKAction.fadeAlpha(to: 1.0, duration: 4)
-
-                let blinkSequence = SKAction.sequence([fadeInAction, fadeOutAction])
-                let blinkForever = SKAction.repeat(blinkSequence, count: 1)
-
-                shapeNode.run(blinkForever)
+        let fadeOutAction = SKAction.fadeAlpha(to: 1.0, duration: 4)
+        
+        let blinkSequence = SKAction.sequence([fadeInAction, fadeOutAction])
+        let blinkForever = SKAction.repeat(blinkSequence, count: 1)
+        
+        shapeNode.run(blinkForever)
     }
     
     func blinkModeLabel(shapeNode: SKLabelNode){
         let fadeInAction = SKAction.fadeAlpha(to: 0.1, duration: 0.5)
-                let fadeOutAction = SKAction.fadeAlpha(to: 1.0, duration: 1)
-
-                let blinkSequence = SKAction.sequence([fadeInAction, fadeOutAction])
-                let blinkForever = SKAction.repeat(blinkSequence, count: 1)
-
+        let fadeOutAction = SKAction.fadeAlpha(to: 1.0, duration: 1)
+        
+        let blinkSequence = SKAction.sequence([fadeInAction, fadeOutAction])
+        let blinkForever = SKAction.repeat(blinkSequence, count: 1)
+        
         shapeNode.run(blinkForever)
-                
+        
     }
 }
